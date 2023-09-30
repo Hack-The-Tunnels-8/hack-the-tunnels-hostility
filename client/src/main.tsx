@@ -1,18 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { CookiesProvider, useCookies } from "react-cookie";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { AccountProvider } from "./context";
+import "./index.scss";
 import {
   Admin,
   Checkout,
   CreateProduct,
+  ErrorPage,
   Home,
   Login,
   Product,
   SignUp,
 } from "./pages";
-import { AccountProvider } from "./context";
-import "./index.scss";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>404</div>,
+    element: <ErrorPage />,
   },
 ]);
 
