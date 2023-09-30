@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Page } from "../../components";
 import { ServiceAPI } from "../../infrastructure";
+import { ProductPreviewCard } from "../../components";
 import "./Checkout.style.scss";
+import { Link } from "react-router-dom";
 
 function Checkout() {
   const { productId } = useParams();
@@ -38,6 +40,16 @@ function Checkout() {
     fetchData();
   }, []);
 
+   const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const json = await ServiceAPI.fetchProducts();
+      setProducts(json.data.products);
+    };
+    fetchData();
+  }, []);
+
   return (
     <Page>
       <div className="checkout-page">
@@ -48,6 +60,15 @@ function Checkout() {
             <div className="checkout-page__product">
               <h3>Title: {product.title}</h3>
             </div>
+            <Link to={`/products/${product.id}`} key={`${product.id}`}>
+              <ProductPreviewCard
+                title={product.title}
+                description={product.description}
+                price={product.price}
+                imageUrl={product.imageUrl}
+                key={`${product.id}`}
+              />
+            </Link>
             <button onClick={() => createOrder()}>
               Create Order (with customer set in code)
             </button>

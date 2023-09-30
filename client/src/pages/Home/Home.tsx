@@ -12,7 +12,6 @@ function Home() {
       const json = await ServiceAPI.fetchProducts();
       setProducts(json.data.products);
     };
-
     fetchData();
   }, []);
 
@@ -42,3 +41,4 @@ function Home() {
 }
 
 export default Home;
+
