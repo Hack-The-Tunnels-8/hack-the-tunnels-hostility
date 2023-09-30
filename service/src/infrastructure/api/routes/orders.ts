@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import { OrderService } from "../../../services";
 import { success, error } from "../utils";
 import { sendSMS } from "../../sms/twilio";
+import { sendOrderEmail } from "../../email/sendEmail";
+
 const router = express.Router();
 
 const getOrder = async (request: Request, response: Response) => {
@@ -36,6 +38,7 @@ const createOrder = async (request: Request, response: Response) => {
     });
   }
   sendSMS('6136003977', 'Your order has been created. Thank you!')
+  sendOrderEmail("caoallan3@gmail.com")
   return success(response, {
     data: {
       order: result.val,
