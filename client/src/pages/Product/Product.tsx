@@ -30,9 +30,9 @@ function Product() {
         {product && (
           <>
             <div className="product-page__product">
-              <div style={{display: "flex"}}>
+              <div style={{display: "flex", flexWrap: "wrap"}}>
                 <div>
-                <img src="https://www.ikea.com/ca/en/images/products/mammut-childrens-chair-indoor-outdoor-red__0727924_pe735940_s5.jpg" width="300" height="400"></img>
+                  <img src="https://www.ikea.com/ca/en/images/products/mammut-childrens-chair-indoor-outdoor-red__0727924_pe735940_s5.jpg" width="300" height="400"></img>
                 </div>
                 <div>
                   <h3>Title: {product.title}</h3>
