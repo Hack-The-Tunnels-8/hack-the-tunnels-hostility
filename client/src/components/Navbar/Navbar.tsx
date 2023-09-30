@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { SearchTerm } from "../../components";
 import { useAccountContext } from "../../context";
 import "./Navbar.style.scss";
 
@@ -12,6 +12,11 @@ function Navbar() {
       <div className="navbar__logo">
         <img src="logo.jpeg" alt="logo" width={50}/>
       </div>
+
+      <div className="navbar__search">
+        <SearchTerm />
+      </div>
+
       <div className="navbar__account">
         {loggedIn() === false ? (
           <>
