@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { OrderService } from "../../../services";
 import { success, error } from "../utils";
-import sendSMS from "../../sms/twilio";
+import { sendSMS } from "../../sms/twilio";
 const router = express.Router();
 
 const getOrder = async (request: Request, response: Response) => {
