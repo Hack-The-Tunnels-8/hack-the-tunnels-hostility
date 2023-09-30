@@ -21,7 +21,7 @@ function Home() {
       <div className="home-page">
         <h1 className="home-page__title">Home</h1>
  
-        <p style={{fontSize: "5em", animation: "effect 2s linear infinite", color: "transparent"}}>Hello World</p>
+        <p style={{fontSize: "5em", animation: "effect 2s linear infinite", color: "transparent", fontFamily: "Comic Sans"}}>Hello World</p>
         <h2>Products:</h2>
         <div className="home-page__products">
           {products.map((product) => (
