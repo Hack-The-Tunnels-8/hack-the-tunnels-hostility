@@ -11,7 +11,8 @@
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "check": "prettier --check '**/*.{css,scss,html,ts}'",
-    "format": "prettier --write '**/*.{css,scss,html,ts}'"
+    "format": "prettier --write '**/*.{css,scss,html,ts}'",
+    "sms": "ts-node src/infrastructure/sms/index.ts"
   },
   "prisma": {
     "schema": "src/infrastructure/db/schema.prisma",
