@@ -1,5 +1,8 @@
 .page {
   // TODO: update height
   margin-top: 70px;
+  // This way nothing is touching the sides
+  margin-right: 15px;
+  margin-left: 15px;
   height: calc(100vh - 70px);
 }
