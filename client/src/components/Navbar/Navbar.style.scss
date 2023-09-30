@@ -1,5 +1,32 @@
 .navbar {
   display: flex;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid black;
+  padding: 0px;
+  height: 70px;
+}
+
+.navbar__logo{
+  padding-left: 10px;
+}
+
+
+.navbar__account{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.button {
+ background-color: black;
+ height: fit-content;
+ color: white; 
+ border-radius: 4px;
+ outline: none;
+ border: none;
 }

@@ -1,4 +1,5 @@
 .page {
   // TODO: update height
-  min-height: 100vh;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
 }
