@@ -1,1 +1,1 @@
-export { default as SearchTerm } from "./SearchTerm";
+export { default as SearchBar } from "./SearchBar";

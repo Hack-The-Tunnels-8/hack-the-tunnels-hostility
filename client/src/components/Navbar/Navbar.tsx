@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { SearchTerm } from "../../components";
+import { SearchBar } from "../../components";
 import { useAccountContext } from "../../context";
 import "./Navbar.style.scss";
 
@@ -14,7 +14,7 @@ function Navbar() {
       </div>
 
       <div className="navbar__search">
-        <SearchTerm />
+        <SearchBar />
       </div>
 
       <div className="navbar__account">
